@@ -1,0 +1,40 @@
+#switch-container{
+	height: 50px;
+	width: 120px;	
+	padding: 10px 5px;
+	border-radius: 50px;
+	background-color: white;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	border: 2px solid;
+	border-color: lightgrey;
+	transition: background-color 0.5s linear;
+	cursor: pointer;
+}
+
+#switch-button{
+	height: 60px;
+	width: 60px;
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: 2px 2px 10px 2px lightgrey;
+	transition: transform 0.3s linear;
+}
+
+input:checked + #switch-container{
+	background-color: #3f51b5;
+	border: 2px solid;
+	border-color: #3f51b5;
+	transition: border-color 0.5s linear;
+}
+
+input:checked + #switch-container > #switch-button{
+	box-shadow: -2px 2px 10px 2px #27357d;
+	transform: translateX(60px);
+}
+
+input{
+	display: none;
+}
+
